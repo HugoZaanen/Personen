@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="400">
     <Grid>
-        <StackPanel Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10" Grid.Column="0">
             <Label Content="Voornaam"/>
             <TextBox Name="FirstName"/>
             <Label Content="Achternaam"/>
@@ -31,5 +39,7 @@
         </StackPanel>
         <Border/>
         <Button Content="Toon persoon" HorizontalAlignment="Left" Margin="10,257,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
+        <DataGrid Grid.Column="1"  >
+        </DataGrid>
     </Grid>
 </Window>

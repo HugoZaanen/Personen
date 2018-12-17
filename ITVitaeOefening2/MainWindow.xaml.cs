@@ -20,6 +20,8 @@ namespace ITVitaeOefening2
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Persoon> AllePersoon = new List<Persoon>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,14 +29,13 @@ namespace ITVitaeOefening2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var p = new Persoon();
+            p.Voornaam = FirstName.Text;
+            p.Achternaam = LastName.Text;
+            p.Geboortedatum = DatePick.Text;
+            p.Geslacht = (GeslachtEnum)Enum.Parse(typeof(GeslachtEnum), Gender.SelectedItem.ToString());
 
-            string firstName = FirstName.Text;
-            string lastName = LastName.Text;
-            string date = DatePick.Text;
-            string gender = Gender.Text;
-            string country = Country.Text;
-
-            MessageBox.Show($"");
+            MessageBox.Show($"{p.Voornaam} {p.Achternaam} {p.Geboortedatum}");
         }
     }
 }
