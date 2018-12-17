@@ -24,5 +24,17 @@ namespace ITVitaeOefening2
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            string firstName = FirstName.Text;
+            string lastName = LastName.Text;
+            string date = DatePick.Text;
+            string gender = Gender.Text;
+            string country = Country.Text;
+
+            MessageBox.Show($"");
+        }
     }
 }

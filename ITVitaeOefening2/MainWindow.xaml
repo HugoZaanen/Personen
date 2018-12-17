@@ -9,16 +9,27 @@
     <Grid>
         <StackPanel Margin="10">
             <Label Content="Voornaam"/>
-            <TextBox/>
+            <TextBox Name="FirstName"/>
             <Label Content="Achternaam"/>
-            <TextBox/>
+            <TextBox Name="LastName"/>
             <Label Content="Geboortedatum"/>
-            <DatePicker x:Name="DatePick"  />
+            <DatePicker x:Name="DatePick" />
             <Label Content="Geslacht"/>
-            <ComboBox Height="20"/>
+            <ComboBox Height="20" Name="Gender">
+                <ComboBoxItem Name="Man">Man</ComboBoxItem>
+                <ComboBoxItem Name="Vrouw">Vrouw</ComboBoxItem>
+                <ComboBoxItem Name="Onbekend">Onbekend</ComboBoxItem>
+            </ComboBox>
             <Label Content="Land"/>
-            <ComboBox Height="20"/>
+            <ComboBox Height="20" Name="Country">
+                <ComboBoxItem Name="Nederland">Nederland</ComboBoxItem>
+                <ComboBoxItem Name="Engeland">Engeland</ComboBoxItem>
+                <ComboBoxItem Name="Duitsland">Duitsland</ComboBoxItem>
+                <ComboBoxItem Name="België">België</ComboBoxItem>
+                <ComboBoxItem Name="Frankrijk">Frankrijk</ComboBoxItem>
+            </ComboBox>
         </StackPanel>
         <Border/>
+        <Button Content="Toon persoon" HorizontalAlignment="Left" Margin="10,257,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
     </Grid>
 </Window>
